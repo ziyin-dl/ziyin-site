@@ -8,6 +8,8 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html { font-size: 115%; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #1a1a1a;
@@ -26,7 +28,7 @@ nav {
 }
 
 nav .inner {
-  max-width: 860px;
+  max-width: 1080px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -53,7 +55,7 @@ nav a:hover, nav a.active { color: #1a1a1a; }
 
 /* ── Sections ── */
 section {
-  max-width: 860px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 4.5rem 2rem;
 }
@@ -78,7 +80,6 @@ section + section { border-top: 1px solid #e5e5e5; }
 #home .bio {
   font-size: 1.02rem;
   color: #333;
-  max-width: 680px;
 }
 
 /* ── Section headings ── */
@@ -110,7 +111,6 @@ h3 {
 .research-body p {
   font-size: 1rem;
   color: #333;
-  max-width: 720px;
 }
 
 .scholar-link {
@@ -206,7 +206,7 @@ h3 {
 
 .resume-item .detail {
   font-size: 0.9rem;
-  color: #888;
+  color: #1a1a1a;
 }
 </style>
 </head>
@@ -225,7 +225,7 @@ h3 {
 <section id="home">
   <div class="name-title">Zi Yin</div>
   <div class="subtitle">Machine Learning &nbsp;·&nbsp; NLP &nbsp;·&nbsp; Statistics &nbsp;·&nbsp; Information Theory</div>
-  <p class="bio">I work in both theory [statistics/information theory] and engineering [computer systems]. I was affiliated to the Stanford Statistical Machine Learning Group, Stanford Platform Lab, and the Information Systems Laboratory (ISL), before pivoting to futures trading.</p>
+  <p class="bio">I work in both theory [statistics/information theory] and engineering [computer systems]. I was affiliated to the <a href="http://statsml.stanford.edu/" target="_blank" rel="noopener">Stanford Statistical Machine Learning Group</a>, <a href="https://platformlab.stanford.edu" target="_blank" rel="noopener">Stanford Platform Lab</a>, and the <a href="http://isl.stanford.edu/" target="_blank" rel="noopener">Information Systems Laboratory (ISL)</a>, before pivoting to futures trading.</p>
 </section>
 
 <!-- ══ RESEARCH ══ -->
@@ -234,7 +234,7 @@ h3 {
 
   <div class="research-body">
     <p>I work in the areas of machine learning and natural language processing. While I am no longer engaged in frontline large language model research, my earlier work contributed to both academic and industrial applications of language models, including some of the earliest integrations of LLMs into search engines in 2016. I broadly identify with the machine learning research community, particularly COLT, ICLR, ICML, and NeurIPS, and maintain strong interests in statistics and information theory. For a period in the past, I also conducted research in systems and networking.</p>
-    <p>My research has received recognition in both academia and industry. Data center networking and clock synchronization systems research was featured on the front page of <em>The New York Times</em>, and has led to the creation of multiple startups. In machine learning, my work in natural language processing has been taught in Stanford University's widely attended CS224n course, led by Professor Christopher Manning.</p>
+    <p>My research has received recognition in both academia and industry. Data center networking research was featured on the front page of <em>The New York Times</em>, and has led to the creation of multiple startups. In machine learning, my work in natural language processing has been taught in Stanford University's widely attended CS224n course, led by Professor Christopher Manning.</p>
     <p>I currently serve as a reviewer for several major conferences, including KDD, NeurIPS, ICLR, and ICML.</p>
   </div>
 
@@ -257,6 +257,11 @@ h3 {
       <span class="badge">Oral presentation — top 0.6% of submissions</span>
       <div class="pub-links"><a href="https://nips.cc/Conferences/2018/Schedule?showEvent=12567" target="_blank" rel="noopener">paper</a><a href="https://github.com/ziyin-dl/word-embedding-dimensionality-selection" target="_blank" rel="noopener">code</a><a href="https://www.dropbox.com/s/9tix9l4h39k4agn/main.pdf?dl=0" target="_blank" rel="noopener">slides</a><a href="https://www.facebook.com/nipsfoundation/videos/vb.375737692517476/745243882514297/?type=2&theater" target="_blank" rel="noopener">video</a></div>
     </li>
+
+  </ul>
+
+  <div id="pub-more" style="display:none;">
+  <ul class="pub-list" style="margin-top:1.75rem;">
 
     <li class="pub-item">
       <div class="title">"The Global Anchor Method for Quantifying Linguistic Shifts and Domain Adaptation"</div>
@@ -301,6 +306,9 @@ h3 {
     </li>
 
   </ul>
+  </div>
+
+  <button id="pub-toggle" onclick="(function(){var m=document.getElementById('pub-more'),b=document.getElementById('pub-toggle');var open=m.style.display!=='none'?false:true;m.style.display=open?'block':'none';b.textContent=open?'Show less ▲':'Show all 8 publications ▼';})()" style="margin-top:1.25rem;background:none;border:1px solid #d1d5db;border-radius:6px;padding:0.6rem 1.5rem;font-size:0.95rem;color:#444;cursor:pointer;transition:background 0.15s;width:100%;">Show all 8 publications ▼</button>
 </section>
 
 <!-- ══ RESUME ══ -->
@@ -332,36 +340,17 @@ h3 {
   </div>
 
   <div class="resume-block">
-    <h3>Media</h3>
-
-    <div class="resume-item">
-      <div class="role"><a href="https://ee-archive.stanford.edu/news/research-news/07-19-2018/research-ee-phd-candidates-geng-liu-and-yin-featured-nyt-tech-article" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">Research by EE PhD candidates Geng, Liu, and Yin featured in NYT Tech article</a></div>
-      <div class="org-date">Stanford News</div>
-    </div>
-
-    <div class="resume-item">
-      <div class="role"><a href="https://www.nytimes.com/2018/06/29/technology/computer-networks-speed-nasdaq.html" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">Time Split to the Nanosecond Is Precisely What Wall Street Wants</a></div>
-      <div class="org-date">The New York Times</div>
-    </div>
-
-    <div class="resume-item">
-      <div class="role"><a href="https://www.jiqizhixin.com/articles/2019-01-03-8" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">NeurIPS 2018 oral论文解读：如何给词嵌入模型选择最优维度</a></div>
-      <div class="org-date">Synced (机器之心)</div>
-    </div>
-  </div>
-
-  <div class="resume-block">
     <h3>Work Experience</h3>
 
     <div class="resume-item">
-      <div class="role">Senior Vice President — Futures Trading</div>
-      <div class="org-date">D.E. Shaw &amp; Co. &nbsp;·&nbsp; Mar 2019 – Sept 2025</div>
+      <div class="role">Senior Vice President</div>
+      <div class="org-date">Futures Trading &nbsp;·&nbsp; D.E. Shaw &amp; Co. &nbsp;·&nbsp; Mar 2019 – Sept 2025 &nbsp;·&nbsp; New York, NY</div>
       <div class="detail">Managed significant risks on major US and EU energy and agriculture markets.</div>
     </div>
 
     <div class="resume-item">
       <div class="role">Machine Learning Engineer</div>
-      <div class="org-date">Moveworks &nbsp;·&nbsp; Oct 2018 – Mar 2019 &nbsp;·&nbsp; Mountain View, CA</div>
+      <div class="org-date">Moveworks (Acquired by ServiceNow) &nbsp;·&nbsp; Oct 2018 – Mar 2019 &nbsp;·&nbsp; Mountain View, CA</div>
     </div>
 
     <div class="resume-item">
@@ -377,6 +366,25 @@ h3 {
     <div class="resume-item">
       <div class="role">Data Scientist Intern</div>
       <div class="org-date">IBM T.J. Watson Lab &nbsp;·&nbsp; June 2015 – Sept 2015 &nbsp;·&nbsp; Yorktown Heights, NY</div>
+    </div>
+  </div>
+
+  <div class="resume-block">
+    <h3>Media</h3>
+
+    <div class="resume-item">
+      <div class="role"><a href="https://ee-archive.stanford.edu/news/research-news/07-19-2018/research-ee-phd-candidates-geng-liu-and-yin-featured-nyt-tech-article" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">Research by EE PhD candidates Geng, Liu, and Yin featured in NYT Tech article</a></div>
+      <div class="org-date">Stanford News</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="role"><a href="https://www.nytimes.com/2018/06/29/technology/computer-networks-speed-nasdaq.html" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">Time Split to the Nanosecond Is Precisely What Wall Street Wants</a></div>
+      <div class="org-date">The New York Times</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="role"><a href="https://www.jiqizhixin.com/articles/2019-01-03-8" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">NeurIPS 2018 oral论文解读：如何给词嵌入模型选择最优维度</a></div>
+      <div class="org-date">Synced (机器之心)</div>
     </div>
   </div>
 </section>
