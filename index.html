@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zi Yin</title>
+<meta name="description" content="Zi Yin — Machine Learning, NLP, Statistics, Information Theory. Former Stanford researcher, now in futures trading.">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+  line-height: 1.7;
+}
+
+/* ── Navigation ── */
+nav {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 100;
+  padding: 0 2rem;
+}
+
+nav .inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  gap: 2rem;
+}
+
+nav .brand {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: #666;
+  font-size: 0.95rem;
+  transition: color 0.15s;
+}
+
+nav a:hover, nav a.active { color: #1a1a1a; }
+
+/* ── Sections ── */
+section {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 4.5rem 2rem;
+}
+
+section + section { border-top: 1px solid #e5e5e5; }
+
+/* ── Home ── */
+#home .name-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.4rem;
+}
+
+#home .subtitle {
+  font-size: 1.05rem;
+  color: #888;
+  margin-bottom: 2.2rem;
+  letter-spacing: 0.01em;
+}
+
+#home .bio {
+  font-size: 1.02rem;
+  color: #333;
+  max-width: 680px;
+}
+
+/* ── Section headings ── */
+h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+  color: #1a1a1a;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.82rem;
+}
+
+/* ── Research ── */
+.research-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.research-body p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 720px;
+}
+
+.scholar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 2.8rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border: 1px solid #bfdbfe;
+  padding: 0.35rem 0.9rem;
+  border-radius: 5px;
+  transition: background 0.15s;
+}
+
+.scholar-link:hover { background: #eff6ff; }
+
+.pub-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.pub-item {
+  padding-left: 1.1rem;
+  border-left: 3px solid #e5e5e5;
+}
+
+.pub-item .title {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.15rem;
+}
+
+.pub-item .authors {
+  font-size: 0.88rem;
+  color: #666;
+  margin-bottom: 0.15rem;
+}
+
+.pub-item .venue {
+  font-size: 0.87rem;
+  color: #888;
+  margin-bottom: 0.4rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.1rem 0.55rem;
+  border-radius: 3px;
+  margin-bottom: 0.45rem;
+  font-weight: 500;
+}
+
+.pub-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.pub-links a {
+  font-size: 0.8rem;
+  color: #2563eb;
+  text-decoration: none;
+  border: 1px solid #bfdbfe;
+  padding: 0.1rem 0.55rem;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+
+.pub-links a:hover { background: #eff6ff; }
+
+/* ── Resume ── */
+.resume-block { margin-bottom: 2.8rem; }
+.resume-block:last-child { margin-bottom: 0; }
+
+.resume-item { margin-bottom: 1.3rem; }
+.resume-item:last-child { margin-bottom: 0; }
+
+.resume-item .role {
+  font-weight: 600;
+  font-size: 0.97rem;
+  color: #1a1a1a;
+}
+
+.resume-item .org-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.15rem;
+}
+
+.resume-item .detail {
+  font-size: 0.9rem;
+  color: #888;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="brand" href="#home">Zi Yin</a>
+    <a href="#home">Home</a>
+    <a href="#research">Research</a>
+    <a href="#resume">Resume</a>
+  </div>
+</nav>
+
+<!-- ══ HOME ══ -->
+<section id="home">
+  <div class="name-title">Zi Yin</div>
+  <div class="subtitle">Machine Learning &nbsp;·&nbsp; NLP &nbsp;·&nbsp; Statistics &nbsp;·&nbsp; Information Theory</div>
+  <p class="bio">I work in both theory [statistics/information theory] and engineering [computer systems]. I was affiliated to the Stanford Statistical Machine Learning Group, Stanford Platform Lab, and the Information Systems Laboratory (ISL), before pivoting to futures trading.</p>
+</section>
+
+<!-- ══ RESEARCH ══ -->
+<section id="research">
+  <h2>Research</h2>
+
+  <div class="research-body">
+    <p>I work in the areas of machine learning and natural language processing. While I am no longer engaged in frontline large language model research, my earlier work contributed to both academic and industrial applications of language models, including some of the earliest integrations of LLMs into search engines in 2016. I broadly identify with the machine learning research community, particularly COLT, ICLR, ICML, and NeurIPS, and maintain strong interests in statistics and information theory. For a period in the past, I also conducted research in systems and networking.</p>
+    <p>My research has received recognition in both academia and industry. Data center networking and clock synchronization systems research was featured on the front page of <em>The New York Times</em>, and has led to the creation of multiple startups. In machine learning, my work in natural language processing has been taught in Stanford University's widely attended CS224n course, led by Professor Christopher Manning.</p>
+    <p>I currently serve as a reviewer for several major conferences, including KDD, NeurIPS, ICLR, and ICML.</p>
+  </div>
+
+  <a class="scholar-link" href="https://scholar.google.com/citations?user=wPQRp_AAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar Profile →</a>
+
+  <h3>Publications</h3>
+  <ul class="pub-list">
+
+    <li class="pub-item">
+      <div class="title">"SIMON: A Simple and Scalable Method for Sensing, Inference and Measurement in Data Center Networks"</div>
+      <div class="authors">Yilong Geng, Shiyu Liu, Zi Yin, Ashish Naik, Balaji Prabhakar, Mendel Rosenblum and Amin Vahdat</div>
+      <div class="venue">16th USENIX Symposium on Networked Systems Design and Implementation (NSDI), Boston, MA, 2019</div>
+      <div class="pub-links"><a href="#">paper</a></div>
+    </li>
+
+    <li class="pub-item">
+      <div class="title">"On the Dimensionality of Word Embedding"</div>
+      <div class="authors">Zi Yin and Yuanyuan Shen</div>
+      <div class="venue">Advances in Neural Information Processing Systems (NeurIPS), Montreal, 2018</div>
+      <span class="badge">Oral presentation — top 0.6% of submissions</span>
+      <div class="pub-links"><a href="#">paper</a><a href="#">code</a><a href="#">slides</a><a href="#">video</a></div>
+    </li>
+
+    <li class="pub-item">
+      <div class="title">"The Global Anchor Method for Quantifying Linguistic Shifts and Domain Adaptation"</div>
+      <div class="authors">Zi Yin, Vin Sachidananda and Balaji Prabhakar</div>
+      <div class="venue">Advances in Neural Information Processing Systems (NeurIPS), Montreal, 2018</div>
+      <div class="pub-links"><a href="#">paper</a><a href="#">code</a><a href="#">poster</a></div>
+    </li>
+
+    <li class="pub-item">
+      <div class="title">"Understand Functionality and Dimensionality of Vector Embeddings: the Distributional Hypothesis, the Pairwise Inner Product Loss and Its Bias-Variance Trade-off"</div>
+      <div class="authors">Zi Yin</div>
+      <div class="venue">arXiv Preprint, arXiv:1803.00502</div>
+      <div class="pub-links"><a href="#">paper</a></div>
+    </li>
+
+    <li class="pub-item">
+      <div class="title">"Exploiting a natural network effect for scalable, fine-grained clock synchronization"</div>
+      <div class="authors">Yilong Geng, Shiyu Liu, Zi Yin, Ashish Naik, Balaji Prabhakar, Mendel Rosenblum and Amin Vahdat</div>
+      <div class="venue">15th USENIX Symposium on Networked Systems Design and Implementation (NSDI), Renton, WA, 2018</div>
+      <div class="pub-links"><a href="#">paper</a></div>
+    </li>
+
+    <li class="pub-item">
+      <div class="title">"Deepprobe: Information directed sequence understanding and chatbot design via recurrent neural networks"</div>
+      <div class="authors">Zi Yin, Keng-hao Chang, and Ruofei Zhang</div>
+      <div class="venue">23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (SIGKDD), Halifax, 2017</div>
+      <div class="pub-links"><a href="#">paper</a><a href="#">video</a><a href="#">poster</a></div>
+    </li>
+
+    <li class="pub-item">
+      <div class="title">"Self-programming networks: Architecture and algorithms"</div>
+      <div class="authors">Yilong Geng, Shiyu Liu, Feiran Wang, Zi Yin, Balaji Prabhakar and Mendel Rosenblum</div>
+      <div class="venue">55th Annual Allerton Conference on Communication, Control, and Computing (Allerton), Monticello, IL, 2017</div>
+      <div class="pub-links"><a href="#">paper</a></div>
+    </li>
+
+    <li class="pub-item">
+      <div class="title">"Mining Effective Subsequences with Application in Marketing Attribution"</div>
+      <div class="authors">Zi Yin, Ying Li, Pietro Mazzoleni and Yuanyuan Shen</div>
+      <div class="venue">IEEE 16th International Conference on Data Mining Workshops (ICDMW), Barcelona, 2016</div>
+      <div class="pub-links"><a href="#">paper</a></div>
+    </li>
+
+  </ul>
+</section>
+
+<!-- ══ RESUME ══ -->
+<section id="resume">
+  <h2>Resume</h2>
+
+  <div class="resume-block">
+    <h3>Education</h3>
+
+    <div class="resume-item">
+      <div class="role">Ph.D. — Electrical Engineering</div>
+      <div class="org-date">Stanford University &nbsp;·&nbsp; 2013–2018</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="role">M.S. — Electrical Engineering</div>
+      <div class="org-date">Stanford University &nbsp;·&nbsp; 2013–2015</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="role">B.Eng. — Information Engineering</div>
+      <div class="org-date">The Chinese University of Hong Kong &nbsp;·&nbsp; 2009–2013</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="role">B.S. — Mathematics</div>
+      <div class="org-date">The Chinese University of Hong Kong &nbsp;·&nbsp; 2009–2013</div>
+    </div>
+  </div>
+
+  <div class="resume-block">
+    <h3>Work Experience</h3>
+
+    <div class="resume-item">
+      <div class="role">Senior Vice President — Futures Trading</div>
+      <div class="org-date">D.E. Shaw &amp; Co. &nbsp;·&nbsp; Mar 2019 – Sept 2025</div>
+      <div class="detail">Managed significant risks on major US and EU energy and agriculture markets.</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="role">Machine Learning Engineer</div>
+      <div class="org-date">Moveworks &nbsp;·&nbsp; Oct 2018 – Mar 2019 &nbsp;·&nbsp; Mountain View, CA</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="role">Software Engineer Intern</div>
+      <div class="org-date">Google Cloud &nbsp;·&nbsp; July 2017 – Sept 2017 &nbsp;·&nbsp; Sunnyvale, CA</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="role">Data Scientist Intern</div>
+      <div class="org-date">Microsoft Bing Ads &nbsp;·&nbsp; June 2016 – Sept 2016 &nbsp;·&nbsp; Sunnyvale, CA</div>
+    </div>
+
+    <div class="resume-item">
+      <div class="role">Data Scientist Intern</div>
+      <div class="org-date">IBM T.J. Watson Lab &nbsp;·&nbsp; June 2015 – Sept 2015 &nbsp;·&nbsp; Yorktown Heights, NY</div>
+    </div>
+  </div>
+</section>
+
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a[href^="#"]');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const a = document.querySelector(`nav a[href="#${e.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>
