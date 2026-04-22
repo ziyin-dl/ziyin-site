@@ -193,12 +193,39 @@ h3 {
 
 .pub-links a:hover { background: #eff6ff; }
 
-/* ── Resume ── */
+/* ── Résumé ── */
 .resume-block { margin-bottom: 2.8rem; }
 .resume-block:last-child { margin-bottom: 0; }
 
-.resume-item { margin-bottom: 1.3rem; }
+.resume-item {
+  margin-bottom: 1.3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
 .resume-item:last-child { margin-bottom: 0; }
+
+.resume-logo {
+  width: 120px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid #e5e5e5;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  background: #fff;
+  padding: 4px;
+}
+.resume-logo.dark-bg {
+  background: #1a1a2e;
+  border-color: #333;
+}
+.resume-logo.square {
+  width: 52px;
+  height: 52px;
+}
+
+.resume-item-body { flex: 1; min-width: 0; }
 
 .resume-item .role {
   font-weight: 600;
@@ -225,7 +252,8 @@ h3 {
     <a class="brand" href="#home">Zi Yin</a>
     <a href="#home">Home</a>
     <a href="#research">Research</a>
-    <a href="#resume">Resume</a>
+    <a href="#resume">Résumé</a>
+    <a href="#media">Media</a>
   </div>
 </nav>
 
@@ -322,29 +350,41 @@ h3 {
 
 <!-- ══ RESUME ══ -->
 <section id="resume">
-  <h2>Resume</h2>
+  <h2>Résumé</h2>
 
   <div class="resume-block">
     <h3>Education</h3>
 
     <div class="resume-item">
-      <div class="role">Ph.D. — Electrical Engineering</div>
-      <div class="org-date">Stanford University &nbsp;·&nbsp; 2013–2018</div>
+      <img class="resume-logo square" src="logos/stanford.svg" alt="Stanford">
+      <div class="resume-item-body">
+        <div class="role">Ph.D. — Electrical Engineering</div>
+        <div class="org-date">Stanford University &nbsp;·&nbsp; 2013–2018</div>
+      </div>
     </div>
 
     <div class="resume-item">
-      <div class="role">M.S. — Electrical Engineering</div>
-      <div class="org-date">Stanford University &nbsp;·&nbsp; 2013–2015</div>
+      <img class="resume-logo square" src="logos/stanford.svg" alt="Stanford">
+      <div class="resume-item-body">
+        <div class="role">M.S. — Electrical Engineering</div>
+        <div class="org-date">Stanford University &nbsp;·&nbsp; 2013–2015</div>
+      </div>
     </div>
 
     <div class="resume-item">
-      <div class="role">B.Eng. — Information Engineering</div>
-      <div class="org-date">The Chinese University of Hong Kong &nbsp;·&nbsp; 2009–2013</div>
+      <img class="resume-logo square" src="logos/cuhk.png" alt="CUHK">
+      <div class="resume-item-body">
+        <div class="role">B.Eng. — Information Engineering</div>
+        <div class="org-date">The Chinese University of Hong Kong &nbsp;·&nbsp; 2009–2013</div>
+      </div>
     </div>
 
     <div class="resume-item">
-      <div class="role">B.S. — Mathematics</div>
-      <div class="org-date">The Chinese University of Hong Kong &nbsp;·&nbsp; 2009–2013</div>
+      <img class="resume-logo square" src="logos/cuhk.png" alt="CUHK">
+      <div class="resume-item-body">
+        <div class="role">B.S. — Mathematics</div>
+        <div class="org-date">The Chinese University of Hong Kong &nbsp;·&nbsp; 2009–2013</div>
+      </div>
     </div>
   </div>
 
@@ -352,53 +392,76 @@ h3 {
     <h3>Work Experience</h3>
 
     <div class="resume-item">
-      <div class="role">Senior Vice President</div>
-      <div class="org-date">Futures Trading &nbsp;·&nbsp; D.E. Shaw &amp; Co. &nbsp;·&nbsp; Mar 2019 – Sept 2025 &nbsp;·&nbsp; New York, NY</div>
-      <div class="detail">Managed significant amount of risk in major US/EU energy and agriculture markets.</div>
+      <img class="resume-logo dark-bg" src="logos/deshaw.svg" alt="D.E. Shaw">
+      <div class="resume-item-body">
+        <div class="role">Senior Vice President</div>
+        <div class="org-date">Futures Trading &nbsp;·&nbsp; D.E. Shaw &amp; Co. &nbsp;·&nbsp; Mar 2019 – Sept 2025 &nbsp;·&nbsp; New York, NY</div>
+        <div class="detail">Managed significant amount of risk in major US/EU energy and agriculture markets.</div>
+      </div>
     </div>
 
     <div class="resume-item">
-      <div class="role">Machine Learning Engineer</div>
-      <div class="org-date">Moveworks (Acquired by ServiceNow) &nbsp;·&nbsp; Oct 2018 – Mar 2019 &nbsp;·&nbsp; Mountain View, CA</div>
-      <div class="detail">Developed Natural Language Understanding and Intent Modeling services.</div>
+      <img class="resume-logo" src="logos/moveworks.svg" alt="Moveworks">
+      <div class="resume-item-body">
+        <div class="role">Machine Learning Engineer</div>
+        <div class="org-date">Moveworks (Acquired by ServiceNow) &nbsp;·&nbsp; Oct 2018 – Mar 2019 &nbsp;·&nbsp; Mountain View, CA</div>
+        <div class="detail">Developed Natural Language Understanding and Intent Modeling services.</div>
+      </div>
     </div>
 
     <div class="resume-item">
-      <div class="role">Software Engineer (Intern)</div>
-      <div class="org-date">Google Cloud &nbsp;·&nbsp; July 2017 – Sept 2017 &nbsp;·&nbsp; Sunnyvale, CA</div>
-      <div class="detail">Reinforcement Learning based load balancing for AdBrain TPU servers.</div>
+      <img class="resume-logo" src="logos/google.png" alt="Google">
+      <div class="resume-item-body">
+        <div class="role">Software Engineer (Intern)</div>
+        <div class="org-date">Google Cloud &nbsp;·&nbsp; July 2017 – Sept 2017 &nbsp;·&nbsp; Sunnyvale, CA</div>
+        <div class="detail">Reinforcement Learning based load balancing for AdBrain TPU servers.</div>
+      </div>
     </div>
 
     <div class="resume-item">
-      <div class="role">Data Scientist (Intern)</div>
-      <div class="org-date">Microsoft Bing Ads &nbsp;·&nbsp; June 2016 – Sept 2016 &nbsp;·&nbsp; Sunnyvale, CA</div>
-      <div class="detail">Deep Learning for User Intent Understanding and Ads Recommendation systems [2 US patents and 1 publication].</div>
+      <img class="resume-logo" src="logos/microsoft.png" alt="Microsoft">
+      <div class="resume-item-body">
+        <div class="role">Data Scientist (Intern)</div>
+        <div class="org-date">Microsoft Bing Ads &nbsp;·&nbsp; June 2016 – Sept 2016 &nbsp;·&nbsp; Sunnyvale, CA</div>
+        <div class="detail">Deep Learning for User Intent Understanding and Ads Recommendation systems [2 US patents and 1 publication].</div>
+      </div>
     </div>
 
     <div class="resume-item">
-      <div class="role">Data Scientist (Intern)</div>
-      <div class="org-date">IBM T.J. Watson Lab &nbsp;·&nbsp; June 2015 – Sept 2015 &nbsp;·&nbsp; Yorktown Heights, NY</div>
-      <div class="detail">Statistical methods for user modeling and business analytics [1 US patent + 1 publication].</div>
+      <img class="resume-logo" src="logos/ibm.svg" alt="IBM">
+      <div class="resume-item-body">
+        <div class="role">Data Scientist (Intern)</div>
+        <div class="org-date">IBM T.J. Watson Lab &nbsp;·&nbsp; June 2015 – Sept 2015 &nbsp;·&nbsp; Yorktown Heights, NY</div>
+        <div class="detail">Statistical methods for user modeling and business analytics [1 US patent + 1 publication].</div>
+      </div>
     </div>
   </div>
 
-  <div class="resume-block">
-    <h3>Media</h3>
 
-    <div class="resume-item">
-      <div class="role"><a href="https://ee-archive.stanford.edu/news/research-news/07-19-2018/research-ee-phd-candidates-geng-liu-and-yin-featured-nyt-tech-article" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">Research by EE PhD candidates Geng, Liu, and Yin featured in NYT Tech article</a></div>
-      <div class="org-date">Stanford News</div>
-    </div>
+</section>
 
-    <div class="resume-item">
-      <div class="role"><a href="https://www.nytimes.com/2018/06/29/technology/computer-networks-speed-nasdaq.html" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">Time Split to the Nanosecond Is Precisely What Wall Street Wants</a></div>
-      <div class="org-date">The New York Times</div>
-    </div>
+<!-- ══ MEDIA ══ -->
+<section id="media">
+  <h2>Media</h2>
 
-    <div class="resume-item">
-      <div class="role"><a href="https://www.jiqizhixin.com/articles/2019-01-03-8" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">NeurIPS 2018 oral论文解读：如何给词嵌入模型选择最优维度</a></div>
-      <div class="org-date">Synced (机器之心)</div>
-    </div>
+  <div class="resume-item">
+    <div class="role"><a href="https://ee-archive.stanford.edu/news/research-news/07-19-2018/research-ee-phd-candidates-geng-liu-and-yin-featured-nyt-tech-article" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">Research by EE PhD candidates Geng, Liu, and Yin featured in NYT Tech article</a></div>
+    <div class="org-date">Stanford News</div>
+  </div>
+
+  <div class="resume-item">
+    <div class="role"><a href="https://www.nytimes.com/2018/06/29/technology/computer-networks-speed-nasdaq.html" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">Time Split to the Nanosecond Is Precisely What Wall Street Wants</a></div>
+    <div class="org-date">The New York Times</div>
+  </div>
+
+  <div class="resume-item">
+    <div class="role"><a href="https://static01.nyt.com/images/2018/06/30/nytfrontpage/scan.pdf" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">Whittling a New York Minute To 100 Billionths of a Second</a></div>
+    <div class="org-date">New York Times, on front page of 06/30/2018</div>
+  </div>
+
+  <div class="resume-item">
+    <div class="role"><a href="https://www.jiqizhixin.com/articles/2019-01-03-8" target="_blank" rel="noopener" style="color:#1a1a1a;text-decoration:none;">NeurIPS 2018 oral论文解读：如何给词嵌入模型选择最优维度</a></div>
+    <div class="org-date">Synced (机器之心)</div>
   </div>
 </section>
 
